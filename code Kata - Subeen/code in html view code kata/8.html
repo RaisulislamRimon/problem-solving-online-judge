@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>C:\Users\Rimon\Desktop\Code Kata - Subeen\8.cpp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="Code::Blocks Exporter plugin" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+.style1 { color: #A0A0A0; }
+.style2 { color: #A0A0A0; }
+.style3 { color: #8080FF; font-weight: bold; }
+.style15 { color: #8080FF; font-weight: bold; }
+.style17 { color: #008080; }
+.style18 { color: #800000; }
+.style4 { color: #F000F0; }
+.style5 { color: #0000A0; font-weight: bold; }
+.style16 { color: #00A000; font-weight: bold; }
+.style6 { color: #0000FF; }
+.style12 { color: #0000FF; }
+.style7 { color: #E0A000; }
+.style8 { color: #000000; }
+.style9 { color: #00A000; }
+.style10 { color: #FF0000; }
+.style34 { color: #000000; background-color: #80FFFF; font-weight: bold; }
+.style35 { color: #FFFFFF; background-color: #FF0000; font-weight: bold; }
+--></style></head>
+<body>
+<pre>
+<code><span style="font: 10pt Consolas;"><span class="body"> 1 </span><span class="style9">#include &lt;iostream&gt;</span>
+<span class="body"> 2  </span><span class="style9">#include &lt;stdio.h&gt;</span>
+<span class="body"> 3  </span><span class="style9">#include &lt;string.h&gt;</span>
+<span class="body"> 4  </span>
+<span class="body"> 5  </span><span class="style5">using namespace </span><span class="style11">std</span><span class="style10">;</span>
+<span class="body"> 6  </span>
+<span class="body"> 7  </span><span class="style5">int </span><span class="style11">add</span><span class="style10">(</span><span class="style5">int </span><span class="style11">n1</span><span class="style10">, </span><span class="style5">int </span><span class="style11">n2</span><span class="style10">)</span>
+<span class="body"> 8  </span><span class="style10">{</span>
+<span class="body"> 9      </span><span class="style5">return </span><span class="style11">n1 </span><span class="style10">+ </span><span class="style11">n2</span><span class="style10">;</span>
+<span class="body">10  </span><span class="style10">}</span>
+<span class="body">11  </span>
+<span class="body">12  </span><span class="style5">int </span><span class="style11">sub</span><span class="style10">(</span><span class="style5">int </span><span class="style11">n1</span><span class="style10">, </span><span class="style5">int </span><span class="style11">n2</span><span class="style10">)</span>
+<span class="body">13  </span><span class="style10">{</span>
+<span class="body">14      </span><span class="style5">return </span><span class="style11">n1 </span><span class="style10">- </span><span class="style11">n2</span><span class="style10">;</span>
+<span class="body">15  </span><span class="style10">}</span>
+<span class="body">16  </span>
+<span class="body">17  </span><span class="style5">int </span><span class="style11">mul</span><span class="style10">(</span><span class="style5">int </span><span class="style11">n1</span><span class="style10">, </span><span class="style5">int </span><span class="style11">n2</span><span class="style10">)</span>
+<span class="body">18  </span><span class="style10">{</span>
+<span class="body">19      </span><span class="style5">return </span><span class="style11">n1 </span><span class="style10">* </span><span class="style11">n2</span><span class="style10">;</span>
+<span class="body">20  </span><span class="style10">}</span>
+<span class="body">21  </span>
+<span class="body">22  </span><span class="style5">int </span><span class="style11">div</span><span class="style10">(</span><span class="style5">int </span><span class="style11">n1</span><span class="style10">, </span><span class="style5">int </span><span class="style11">n2</span><span class="style10">)</span>
+<span class="body">23  {</span>
+<span class="body">24      return n1 / n2;</span>
+<span class="body">25  }</span>
+<span class="body">26  </span>
+<span class="body">27  int main()</span>
+<span class="body">28  {</span>
+<span class="body">29      int number1, number2, result;</span>
+<span class="body">30      char operation[10];</span>
+<span class="body">31  </span>
+<span class="body">32      while(1)</span>
+<span class="body">33      {</span>
+<span class="body">34          printf("Enter two numbers (or two 0s two exit) : ");</span>
+<span class="body">35          scanf("%d %d", &amp;number1, &amp;number2);</span>
+<span class="body">36  </span>
+<span class="body">37          if (number1 == 0 &amp;&amp; number2 == 0)</span>
+<span class="body">38          {</span>
+<span class="body">39              printf("Program Terminated\n");</span>
+<span class="body">40              break;</span>
+<span class="body">41          }</span>
+<span class="body">42          printf("Enter any of the following command\n");</span>
+<span class="body">43          printf("\tadd for addition\n\tsub for subtraction\n\tmul for multiplication\n\tdiv for division :\n");</span>
+<span class="body">44          scanf("%s", operation);</span>
+<span class="body">45  </span>
+<span class="body">46          if (!strcmp(operation, "add"))</span>
+<span class="body">47          {</span>
+<span class="body">48              result = add(number1, number2);</span>
+<span class="body">49          }</span>
+<span class="body">50          else if(!strcmp(operation, "sub"))</span>
+<span class="body">51          {</span>
+<span class="body">52              result = sub(number1, number2);</span>
+<span class="body">53          }</span>
+<span class="body">54          else if(!strcmp(operation, "mul"))</span>
+<span class="body">55          {</span>
+<span class="body">56              result = mul(number1, number2);</span>
+<span class="body">57          }</span>
+<span class="body">58          else if(!strcmp(operation, "div"))</span>
+<span class="body">59          {</span>
+<span class="body">60              if(number2 == 0)</span>
+<span class="body">61              {</span>
+<span class="body">62                  printf("Can not divide by zero\n");</span>
+<span class="body">63                  continue;</span>
+<span class="body">64              }</span>
+<span class="body">65              result = div(number1, number2);</span>
+<span class="body">66          }</span>
+<span class="body">67          else</span>
+<span class="body">68          {</span>
+<span class="body">69              printf("Unknown Command\n");</span>
+<span class="body">70              continue;</span>
+<span class="body">71          }</span>
+<span class="body">72          printf("Result = %d\n", result);</span>
+<span class="body">73      }</span>
+<span class="body">74  </span>
+<span class="body">75      return 0;</span>
+<span class="body">76  }</span></span>
+</code></pre>
+</body>
+</html>
